@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credit-risk-training"
+version = "0.1.0"
+description = "Reproducible historical-loan training application"
+requires-python = ">=3.13"
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+py-modules = ["train"]
+
+[tool.setuptools.packages.find]
+include = ["credit_risk*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.mypy]
+files = ["credit_risk", "train.py"]
+ignore_missing_imports = true
+check_untyped_defs = true
+disallow_untyped_defs = true

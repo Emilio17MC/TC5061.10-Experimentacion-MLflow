@@ -1,0 +1,15 @@
+*.egg-info/
+reports/figures/
+.DS_Store
+.venv/
+.cache/
+__pycache__/
+.ipynb_checkpoints/
+mlflow.db*
+mlartifacts/
+mlruns/
+artifacts/
+.mlflow/
+# Fuentes locales voluminosas: distribuir por separado si se requiere reproducir.
+data/*.csv
+
